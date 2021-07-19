@@ -2,81 +2,89 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-		<!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP
-		<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'"> -->
 	    
 		<link rel="stylesheet" type="text/css" href="styles/reset.css">
 		<link rel="stylesheet" type="text/css" href="styles/style.css">
-		<link rel="shortcut icon" type="image/png" href="images/favicon_io/favicon-32x32.png">
+		<link rel="shortcut icon" type="image/png" href="images/linux.png">
 		
 		<title>Jogo da memória</title>
 	</head>
-	<body class="background">
-		<header><h1>Jogo da memória</h1></header>
-		<main>
-			<section class="memory-game">
-				<div class="memory-card" data-framework="arch">
-					<img class="front-face" src="images/arch.png" alt="Arch" />
-					<img class="back-face" src="images/linux.png" alt="Linux" />
-				</div>
-				<div class="memory-card" data-framework="arch">
-					<img class="front-face" src="images/arch.png" alt="Arch" />
-					<img class="back-face" src="images/linux.png" alt="Linux" />
-				</div>
+	<span id="blur">
+		<body class="background">
+			
+			<header><h1>Jogo da memória</h1></header>
+			<main>
+				
+				<section class="memory-game">
+					<div class="memory-card" data-framework="arch">
+						<img class="front-face" src="images/arch.png" alt="Arch" />
+						<img class="back-face" src="images/linux.png" alt="Linux" />
+					</div>
+					<div class="memory-card" data-framework="arch">
+						<img class="front-face" src="images/arch.png" alt="Arch" />
+						<img class="back-face" src="images/linux.png" alt="Linux" />
+					</div>
 
-				<div class="memory-card" data-framework="centos">
-					<img class="front-face" src="images/centos.png" alt="CentOS" />
-					<img class="back-face" src="images/linux.png" alt="Linux" />
-				</div>
-				<div class="memory-card" data-framework="centos">
-					<img class="front-face" src="images/centos.png" alt="CentOS" />
-					<img class="back-face" src="images/linux.png" alt="Linux" />
-				</div>
+					<div class="memory-card" data-framework="centos">
+						<img class="front-face" src="images/centos.png" alt="CentOS" />
+						<img class="back-face" src="images/linux.png" alt="Linux" />
+					</div>
+					<div class="memory-card" data-framework="centos">
+						<img class="front-face" src="images/centos.png" alt="CentOS" />
+						<img class="back-face" src="images/linux.png" alt="Linux" />
+					</div>
 
-				<div class="memory-card" data-framework="debian">
-					<img class="front-face" src="images/debian.png" alt="Debian" />
-					<img class="back-face" src="images/linux.png" alt="Linux" />
-				</div>
-				<div class="memory-card" data-framework="debian">
-					<img class="front-face" src="images/debian.png" alt="Debian" />
-					<img class="back-face" src="images/linux.png" alt="Linux" />
-				</div>
+					<div class="memory-card" data-framework="debian">
+						<img class="front-face" src="images/debian.png" alt="Debian" />
+						<img class="back-face" src="images/linux.png" alt="Linux" />
+					</div>
+					<div class="memory-card" data-framework="debian">
+						<img class="front-face" src="images/debian.png" alt="Debian" />
+						<img class="back-face" src="images/linux.png" alt="Linux" />
+					</div>
 
-				<div class="memory-card" data-framework="fedora">
-					<img class="front-face" src="images/fedora.png" alt="Fedora" />
-					<img class="back-face" src="images/linux.png" alt="Linux" />
-				</div>
-				<div class="memory-card" data-framework="fedora">
-					<img class="front-face" src="images/fedora.png" alt="Fedora" />
-					<img class="back-face" src="images/linux.png" alt="Linux" />
-				</div>
+					<div class="memory-card" data-framework="fedora">
+						<img class="front-face" src="images/fedora.png" alt="Fedora" />
+						<img class="back-face" src="images/linux.png" alt="Linux" />
+					</div>
+					<div class="memory-card" data-framework="fedora">
+						<img class="front-face" src="images/fedora.png" alt="Fedora" />
+						<img class="back-face" src="images/linux.png" alt="Linux" />
+					</div>
 
-				<div class="memory-card" data-framework="gentoo">
-					<img class="front-face" src="images/gentoo.png" alt="Gentoo" />
-					<img class="back-face" src="images/linux.png" alt="Linux" />
-				</div>
-				<div class="memory-card" data-framework="gentoo">
-					<img class="front-face" src="images/gentoo.png" alt="Gentoo" />
-					<img class="back-face" src="images/linux.png" alt="Linux" />
-				</div>
+					<div class="memory-card" data-framework="gentoo">
+						<img class="front-face" src="images/gentoo.png" alt="Gentoo" />
+						<img class="back-face" src="images/linux.png" alt="Linux" />
+					</div>
+					<div class="memory-card" data-framework="gentoo">
+						<img class="front-face" src="images/gentoo.png" alt="Gentoo" />
+						<img class="back-face" src="images/linux.png" alt="Linux" />
+					</div>
 
-				<div class="memory-card" data-framework="ubuntu">
-					<img class="front-face" src="images/ubuntu.png" alt="Ubuntu" />
-					<img class="back-face" src="images/linux.png" alt="Linux" />
-				</div>
-				<div class="memory-card" data-framework="ubuntu">
-					<img class="front-face" src="images/ubuntu.png" alt="Ubuntu" />
-					<img class="back-face" src="images/linux.png" alt="Linux" />
-				</div>
-			</section>
-			<script src="scripts/script.js"></script>
-		</main>
-		<footer>
-			<p>
-				Copyright &copy; <script>document.write(new Date().getFullYear());</script>, Kelvin Ribeiro
-			</p>	
-		</footer>
-		<!-- You can also require other files to run in this process -->
-		<script src="./renderer.js"></script>
-	</body>
+					<div class="memory-card" data-framework="ubuntu">
+						<img class="front-face" src="images/ubuntu.png" alt="Ubuntu" />
+						<img class="back-face" src="images/linux.png" alt="Linux" />
+					</div>
+					<div class="memory-card" data-framework="ubuntu">
+						<img class="front-face" src="images/ubuntu.png" alt="Ubuntu" />
+						<img class="back-face" src="images/linux.png" alt="Linux" />
+					</div>
+				</section>
+			</main>
+			<footer>
+				<p>
+					Copyright &copy; <script>document.write(new Date().getFullYear());</script>, Kelvin Ribeiro
+				</p>	
+			</footer>
+		</body>
+	</span>
+	<div id="restartButton">
+		<div id="center">
+			<!-- https://www.30secondsofcode.org/css/s/mouse-cursor-gradient-tracking -->
+			<button class="mouse-cursor-gradient-tracking" onClick="window.location.reload();">
+				<span id="buttonText">Reiniciar</span>
+			</button>
+		</div>
+	</div>
+	<script src="scripts/script.js"></script>
 </html>

@@ -1,5 +1,10 @@
 const cards = document.querySelectorAll('.memory-card');
 
+//Reset
+var count = 0; //variável contadora para realizar o reset
+var restartElement = document.getElementById('restartButton'); //recebe o elemento referente ao botão
+restartElement.style.display='none'; //define a visibilidade do botão para none
+
 let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
@@ -32,6 +37,39 @@ function disableCards() {
   secondCard.removeEventListener('click', flipCard);
 
   resetBoard();
+  
+  count++;
+  console.log(count);
+  if(count == 6){
+	restart();
+  }
+}
+
+function restart() {
+    restartElement.style.display='block'; //define a visibilidade do botão para block
+    
+    //https://www.30secondsofcode.org/css/s/mouse-cursor-gradient-tracking
+    let btn = document.querySelector('.mouse-cursor-gradient-tracking');
+    btn.addEventListener('mousemove', e => {
+        let rect = e.target.getBoundingClientRect();
+        let x = e.clientX - rect.left;
+        let y = e.clientY - rect.top;
+        btn.style.setProperty('--x', x + 'px');
+        btn.style.setProperty('--y', y + 'px');
+    });
+    //-------------------------------------------------------------------------------------------------
+    
+    atictiveBlur();
+    
+    setTimeout(function() {
+        window.location.reload();
+    }, 6000);
+
+}
+
+function atictiveBlur() {
+	var blur = document.getElementById('blur');
+	blur.classList.toggle('active');
 }
 
 function unflipCards() {
